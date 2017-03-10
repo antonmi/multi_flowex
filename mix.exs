@@ -17,7 +17,7 @@ defmodule MultiFlowex.Mixfile do
 
   defp deps do
     [
-      {:flowex, path: "/Users/antonmi/elixir/flowex"},
+      {:flowex, "0.3.0"},
       {:espec, "1.3.0", only: :test},
 
       {:export, "~> 0.1.0"},
