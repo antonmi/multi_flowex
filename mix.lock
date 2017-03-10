@@ -1,0 +1,7 @@
+%{"erlport": {:hex, :erlport, "0.9.8", "b7dc57eb87f215a671926bfbcd23e6e9c76f8653b0d072627b41431ef51c4d20", [:rebar3], []},
+  "espec": {:hex, :espec, "1.3.0", "79430c7291aa940a375f62eb740d5038fe68f58c2a5ac25b89b5d35f86aed31f", [:mix], [{:meck, "~> 0.8.4", [hex: :meck, optional: false]}]},
+  "export": {:hex, :export, "0.1.0", "1d1870f54996a88d067c927c7e00bca42d9e84775b4e3c75952ed351ad950551", [:mix], [{:erlport, "~> 0.9", [hex: :erlport, optional: false]}]},
+  "flowex": {:hex, :flowex, "0.2.0", "6486cd653c10d001110dab44c5512aec1f84b74a604aca2ae9c44d19564860f7", [:mix], [{:gen_stage, "0.11.0", [hex: :gen_stage, optional: false]}]},
+  "gen_stage": {:hex, :gen_stage, "0.11.0", "943bdfa85c75fa624e0a36a9d135baad20a523be040178f5a215444b45c66ea4", [:mix], []},
+  "meck": {:hex, :meck, "0.8.4", "59ca1cd971372aa223138efcf9b29475bde299e1953046a0c727184790ab1520", [:make, :rebar], []},
+  "porcelain": {:hex, :porcelain, "2.0.3", "2d77b17d1f21fed875b8c5ecba72a01533db2013bd2e5e62c6d286c029150fdc", [:mix], []}}
