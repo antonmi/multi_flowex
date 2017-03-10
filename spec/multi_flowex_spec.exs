@@ -1,7 +1,7 @@
-defmodule MultiPipelineSpec do
+defmodule MultiFlowexSpec do
   use ESpec
 
-  let :pipeline, do: MultiPipeline.start()
+  let :pipeline, do: Application.get_env(:multi_flowex, :pipeline)
 
   it "returns hello" do
     result = MultiPipeline.call(pipeline(), %MultiPipeline{})

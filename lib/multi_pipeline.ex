@@ -1,12 +1,10 @@
 defmodule MultiPipeline do
   use Flowex.Pipeline
 
-  defstruct data: nil
+  defstruct data: []
 
-  pipe :first
-
-  def first(struct, _opts) do
-    %{struct | data: "hello"}
-  end
-
+  pipe RubyPipe, 3
+  pipe PythonPipe, 4
+  pipe ShellPipe, 2
+  pipe ElixirPipe
 end
