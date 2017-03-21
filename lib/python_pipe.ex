@@ -10,7 +10,9 @@ defmodule PythonPipe do
   end
 
   def call(struct, opts) do
-    {"ok", result} = Python.call(opts.py, append(struct.data, "Hello from Python"), from_file: @main_file)
+    {"ok", result} = Python.call(opts.py,
+                                 append(struct.data, "Hello from Python"),
+                                 from_file: @main_file)
     %{struct | data: result}
   end
 end

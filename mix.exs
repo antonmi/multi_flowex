@@ -18,11 +18,12 @@ defmodule MultiFlowex.Mixfile do
   defp deps do
     [
       {:flowex, "0.3.0"},
-      {:espec, "1.3.0", only: :test},
 
       {:export, "~> 0.1.0"},
       {:erlport, "0.9.8", manager: :make},
-      {:porcelain, "2.0.3"}
+      {:porcelain, "2.0.3"},
+
+      {:espec, "1.3.0", only: :test}
     ]
   end
 end

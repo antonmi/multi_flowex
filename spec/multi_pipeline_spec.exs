@@ -5,6 +5,7 @@ defmodule MultiPipelineSpec do
 
   it "returns hello" do
     result = MultiPipeline.call(pipeline(), %MultiPipeline{})
-    expect(result.data).to eq("Hello from Ruby, Hello from Python, Hello from shell")
+    greetings = "Hello from Ruby, Hello from Python, Hello from shell"
+    expect(result.data).to eq(greetings)
   end
 end

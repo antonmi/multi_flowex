@@ -10,7 +10,9 @@ defmodule RubyPipe do
   end
 
   def call(struct, opts) do
-    {:ok, result} = Ruby.call(opts.ruby, push(struct.data, "Hello from Ruby"), from_file: @main_file)
+    {:ok, result} = Ruby.call(opts.ruby,
+                              push(struct.data, "Hello from Ruby"),
+                              from_file: @main_file)
     %{struct | data: result}
   end
 end
