@@ -1,4 +1,6 @@
 defmodule RubyPipe do
+  defstruct [:data]
+
   @ruby_dir Application.app_dir(:multi_flowex, "priv/ruby")
   @main_file "main"
 
@@ -9,10 +11,8 @@ defmodule RubyPipe do
     Map.put(opts, :ruby, ruby)
   end
 
-  def call(struct, opts) do
-    {:ok, result} = Ruby.call(opts.ruby,
-                              push(struct.data, "Hello from Ruby"),
-                              from_file: @main_file)
-    %{struct | data: result}
+  def call(%{data: data}, %{ruby: ruby}) do
+    {:ok, result} = Ruby.call(ruby, push(data, "Hello from Ruby"), from_file: @main_file)
+    %{data: result}
   end
 end

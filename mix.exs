@@ -17,7 +17,7 @@ defmodule MultiFlowex.Mixfile do
 
   defp deps do
     [
-      {:flowex, "0.3.0"},
+      {:flowex, "0.4.0"},
 
       {:export, "~> 0.1.0"},
       {:erlport, "0.9.8", manager: :make},

@@ -1,4 +1,6 @@
 defmodule PythonPipe do
+  defstruct [:data]
+
   @python_dir Application.app_dir(:multi_flowex, "priv/python")
   @main_file "main"
 
@@ -9,10 +11,8 @@ defmodule PythonPipe do
     Map.put(opts, :py, py)
   end
 
-  def call(struct, opts) do
-    {"ok", result} = Python.call(opts.py,
-                                 append(struct.data, "Hello from Python"),
-                                 from_file: @main_file)
-    %{struct | data: result}
+  def call(%{data: data}, %{py: py}) do
+    {"ok", result} = Python.call(py, append(data, "Hello from Python"), from_file: @main_file)
+    %{data: result}
   end
 end

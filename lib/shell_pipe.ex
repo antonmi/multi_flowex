@@ -1,9 +1,11 @@
 defmodule ShellPipe do
+  defstruct [:data]
+
   def init(opts), do: opts
 
-  def call(struct, _opts) do
+  def call(%{data: data}, _opts) do
     output = Porcelain.shell("echo 'Hello from shell'").out
-    result = struct.data ++ [String.rstrip(output)]
-    %{struct | data: result}
+    result = data ++ [String.rstrip(output)]
+    %{data: result}
   end
 end
